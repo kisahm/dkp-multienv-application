@@ -2,14 +2,10 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: envars-webhook-values
-  labels:
-    "kommander.d2iq.io/application": "envars-webhook"
+  name: envars-webhook-0.1.6-defaults
+  namespace: ${releaseNamespace}
 data:
   values.yaml: |
-    nameOverride: "envars"
-    serviceAccount:
-      name: "envars"
     webhook:
       verboseLogs: false 
       containersAllowed:

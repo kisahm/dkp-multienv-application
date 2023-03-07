@@ -1,0 +1,12 @@
+displayName: Envars Webhook
+description: Get node labels as environment variables
+category:
+  - Multi Cloud
+type: platform
+scope:
+  - workspace
+certifications:
+  - certified
+overview: |-
+  # Overview
+  tbd
