@@ -5,3 +5,4 @@ resources:
   - hello/deployment-hello.yaml
   - hello/svc-hello.yaml
   - hello/ingress-hello.yaml
+  - hello/middleware.yaml

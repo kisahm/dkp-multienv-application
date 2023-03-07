@@ -4,7 +4,7 @@ metadata:
   annotations:
     kubernetes.io/ingress.class: kommander-traefik
     ingress.kubernetes.io/auth-response-headers: X-Forwarded-User
-    traefik.ingress.kubernetes.io/router.middlewares: ${releaseNamespace}-stripprefix@kubernetescrd
+    traefik.ingress.kubernetes.io/router.middlewares: stripprefix@kubernetescrd
     traefik.ingress.kubernetes.io/router.tls: "true"
   name: hello
 spec:
