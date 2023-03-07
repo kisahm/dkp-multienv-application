@@ -5,4 +5,6 @@ resources:
   - helm-repositories/danfromtitan-repo.yaml
   - common/configmap-envars-webhook-values.yaml
   - common/helmrelease-envars-webhook.yaml
-
+  - hello/deployment-hello.yaml
+  - hello/svc-hello.yaml
+  - hello/ingress-hello.yaml

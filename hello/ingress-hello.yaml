@@ -1,0 +1,19 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  annotations:
+    ingress.kubernetes.io/auth-response-headers: X-Forwarded-User
+    traefik.ingress.kubernetes.io/router.middlewares: ${releaseNamespace}-stripprefix@kubernetescrd
+    traefik.ingress.kubernetes.io/router.tls: "true"
+  name: hello
+spec:
+  rules:
+  - http:
+      paths:
+      - backend:
+          service:
+            name: hello
+            port:
+              number: 80
+        path: /multienv/hello
+        pathType: ImplementationSpecific

@@ -6,7 +6,7 @@ metadata:
   labels:
     "kommander.d2iq.io/application": "envars-webhook"
 data:
-  values: |
+  values.yaml: |
     webhook:
       verboseLogs: false 
       containersAllowed:
