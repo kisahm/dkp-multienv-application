@@ -7,6 +7,9 @@ metadata:
     "kommander.d2iq.io/application": "envars-webhook"
 data:
   values.yaml: |
+    nameOverride: "envars"
+    serviceAccount:
+      name: "envars"
     webhook:
       verboseLogs: false 
       containersAllowed:
