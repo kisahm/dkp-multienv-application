@@ -3,6 +3,7 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
   - helm-repositories/danfromtitan-repo.yaml
+  - common/clusterrole-multienv.yaml
   - common/configmap-envars-webhook-values.yaml
   - common/helmrelease-envars-webhook.yaml
   - hello/deployment-hello.yaml
