@@ -13,3 +13,4 @@ data:
         ingester: true
         prober: true
         store-gateway: true
+      namespaceSelector: multienv
