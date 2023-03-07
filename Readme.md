@@ -56,3 +56,13 @@ kubectl get GitRepository -n ${WORKSPACE_NAMESPACE}
 kubectl get apps -n ${WORKSPACE_NAMESPACE}
 ````
 
+## Deploy Multi cluster application
+1. Create project
+> Name: multienv
+> Namespace name: multienv
+
+2. Add GitOps
+> Name: multienv
+> Repository URL: https://github.com/kisahm/dkp-multienv-application
+> Branch name: main
+> Path: ./project
