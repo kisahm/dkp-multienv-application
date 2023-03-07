@@ -2,7 +2,7 @@
 apiVersion: traefik.containo.us/v1alpha1
 kind: Middleware
 metadata:
-  name: multienv-stripprefixes
+  name: stripprefixes
 spec:
   stripPrefix:
     prefixes:
