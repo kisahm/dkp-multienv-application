@@ -3,13 +3,13 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: envars-webhook-values
-  namespace: ${releaseNamespace}
+  namespace: ${projectNamespace}
   labels:
     "kommander.d2iq.io/application": "envars-webhook"
 data:
   values: |
     webhook:
-      namespaceSelector: ${releaseNamespace}
+      namespaceSelector: ${projectNamespace}
       verboseLogs: false 
       containersAllowed:
         ingester: true
