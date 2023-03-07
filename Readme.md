@@ -3,6 +3,8 @@
 ## Requirements
 * Project namespace *MUST* named: multienv
 * Cluster must be labeled with: environment = <prod/dev/stage/whatever>
+* custom application catalog must be attached
+* "Envars-webhook" app must be deployed to workspace
 
 ## How to deploy the application catalog
 
@@ -36,7 +38,6 @@ spec:
     branch: ${BRANCH}
   timeout: 20s
   url: https://${GITSERVER}/${GITREPO}
-  fromPath: ./catalog
 EOF
 ````
 
@@ -54,3 +55,4 @@ kubectl get GitRepository -n ${WORKSPACE_NAMESPACE}
 ````
 kubectl get apps -n ${WORKSPACE_NAMESPACE}
 ````
+
