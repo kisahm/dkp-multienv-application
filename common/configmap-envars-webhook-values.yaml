@@ -1,0 +1,17 @@
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: envars-webhook-values
+  namespace: ${releaseNamespace}
+  labels:
+    "kommander.d2iq.io/application": "envars-webhook"
+data:
+  values: |
+    webhook:
+      namespaceSelector: ${releaseNamespace}
+      verboseLogs: false 
+      containersAllowed:
+        ingester: true
+        prober: true
+        store-gateway: true
