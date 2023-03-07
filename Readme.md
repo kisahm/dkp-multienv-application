@@ -36,7 +36,7 @@ spec:
     branch: ${BRANCH}
   timeout: 20s
   url: https://${GITSERVER}/${GITREPO}
-  path: ./catalog
+  fromPath: ./catalog
 EOF
 ````
 
