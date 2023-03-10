@@ -2,9 +2,14 @@
 
 ## Requirements
 * Project namespace *MUST* named: multienv
-* Cluster must be labeled with: environment = <prod/dev/stage/whatever>
+* Nodes must be labeled with: environment = <prod/dev/stage/whatever>
 * custom application catalog must be attached
 * "Envars-webhook" app must be deployed to workspace
+
+### Relabel nodes
+````
+for i in $(kubectl get no --no-headers |grep -v control|cut -d" " -f1); do kubectl label node $i environment=prod; done
+````
 
 ## How to deploy the application catalog
 
@@ -60,6 +65,7 @@ kubectl get apps -n ${WORKSPACE_NAMESPACE}
 1. Create project
 > Name: multienv
 > Namespace name: multienv
+> Namespace Labels: envars=enabled
 
 2. Add GitOps
 > Name: multienv

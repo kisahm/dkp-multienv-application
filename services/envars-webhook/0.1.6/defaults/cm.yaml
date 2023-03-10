@@ -7,9 +7,10 @@ metadata:
 data:
   values.yaml: |
     webhook:
-      verboseLogs: false 
       containersAllowed:
         ingester: true
         prober: true
         store-gateway: true
+      namespaceSelector: enabled
       namespaceSelectorLabel: envars
+      verboseLogs: false
