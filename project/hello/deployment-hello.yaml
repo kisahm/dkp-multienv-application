@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: ingester
-        image: docker.io/kisahm/dkp-multienv-hello:latest 
+        image: docker.io/kisahm/dkp-multienv-hello:0.0.2 
         ports:
         - containerPort: 80
         env:
@@ -28,3 +28,10 @@ spec:
             valueFrom:
               fieldRef:
                 fieldPath: metadata.namespace
+        volumeMounts:
+          - name: config-volume
+            mountPath: /var/www/html/env/
+      volumes:
+        - name: config-volume
+          configMap:
+            name: hello-environments

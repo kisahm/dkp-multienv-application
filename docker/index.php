@@ -62,13 +62,15 @@ div.check {
 <img alt='NGINX Logo' src='https://assets.d2iq.com/production/assets/pages/brand/logo/logo-positive@1x.jpg'/>
 <div class='info'>
 <p><span>Environment:</span> <span>";
-echo $_ENV["ENVIRONMENT"];
+echo $_ENV["NODE_ENVIRONMENT"];
 echo "</span></p><p><span>Namespace&nbsp;name:</span> <span>";
 echo $_ENV["NAMESPACE"];
 echo "</span></p>
 <p><span>Pod&nbsp;name:</span> <span>";
 echo $_ENV["POD_NAME"];
-echo "</span></p>
+echo "</span></p><p><span>Go&nbsp;to:</span> <span><a href='env/";
+echo $_ENV["NODE_ENVIRONMENT"];
+echo ".php'>Cluster</a></span></p>
 </div>
 </body>
 </html>";
