@@ -8,9 +8,7 @@ data:
   values.yaml: |
     webhook:
       containersAllowed:
-        ingester: true
-        prober: true
-        store-gateway: true
+        withenv: true
       namespaceSelector: enabled
       namespaceSelectorLabel: envars
       verboseLogs: false
