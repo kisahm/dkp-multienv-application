@@ -68,7 +68,7 @@ echo $_ENV["NAMESPACE"];
 echo "</span></p>
 <p><span>Pod&nbsp;name:</span> <span>";
 echo $_ENV["POD_NAME"];
-echo "</span></p><p><span>Go&nbsp;to:</span> <span><a href='env/";
+echo "</span></p><p><span>Go&nbsp;to:</span> <span><a href='hello/env/";
 echo $_ENV["NODE_ENVIRONMENT"];
 echo ".php'>Cluster</a></span></p>
 </div>
