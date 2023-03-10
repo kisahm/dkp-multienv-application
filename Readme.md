@@ -8,7 +8,8 @@
 
 ### Relabel nodes
 ````
-for i in $(kubectl get no --no-headers |grep -v control|cut -d" " -f1); do kubectl label node $i environment=prod; done
+export ENV_LABEL=prod
+for i in $(kubectl get no --no-headers |grep -v control|cut -d" " -f1); do kubectl label node $i environment=${ENV_LABEL}; done
 ````
 
 ## How to deploy the application catalog
@@ -63,12 +64,12 @@ kubectl get apps -n ${WORKSPACE_NAMESPACE}
 
 ## Deploy Multi cluster application
 1. Create project
-> Name: multienv
-> Namespace name: multienv
-> Namespace Labels: envars=enabled
+* Name: multienv
+* Namespace name: multienv
+* Namespace Labels: envars=enabled
 
 2. Add GitOps
-> Name: multienv
-> Repository URL: https://github.com/kisahm/dkp-multienv-application
-> Branch name: main
-> Path: ./project
+* Name: multienv
+* Repository URL: https://github.com/kisahm/dkp-multienv-application
+* Branch name: main
+* Path: ./project
