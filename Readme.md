@@ -73,3 +73,5 @@ kubectl get apps -n ${WORKSPACE_NAMESPACE}
 * Repository URL: https://github.com/kisahm/dkp-multienv-application
 * Branch name: main
 * Path: ./project
+
+3. Check out the website via Ingress: https://<Ingress IP/DNS>/multienv/hello
